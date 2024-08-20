@@ -1,4 +1,5 @@
-def saudacao(nome):
-    print(f"Olá, {nome}")
+def soma(a, b):
+    return a + b
 
-saudacao("Eduardo")
+resultado = soma(3, 4)
+print(resultado)
