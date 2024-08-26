@@ -44,3 +44,6 @@ elif nota >= 7:
     print("Bom")
 else:
     print("Precisa Melhorar")
+
+
+
