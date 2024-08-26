@@ -25,3 +25,47 @@ def soma_variavel(*numeros):
     return total
 print(soma_variavel(1, 2, 3))
 print(soma_variavel(4, 5, 6, 7))
+
+#Manejo de Exceções
+
+#Try
+try:
+    #código que pode gerar uma exceção
+    resultado = 10 / 0
+    print(resultado)
+except ZeroDivisionError:
+    print("Erro: Divisão por zero")
+
+
+#Except
+try:
+    #código que pode gerar uma exceção
+    resultado = 10 / 0
+    print(resultado)
+except ZeroDivisionError:
+    print("Erro: Divisão por zero")
+except ValueError:
+    print("Erro: valor inválido")
+
+#Finally
+"""
+try:
+    #codigo que pode gerar uma exceção
+    arquivo = open("arquivo.txt", "r")
+    #realizar operações com o arquivo
+except FileNotFoundError:
+    print("Erro: Arquivo não encontrado")
+finally:
+    arquivo.close() # fechar o arquivo sempre, mesmo se ocorrer uma exceção
+"""
+
+#Exceções Personalizadas
+def funcao():
+    #codigo que pode gerar uma exceção personalizada
+    if condicao:
+        raise Exception("Descrição do erro")
+    
+    try:
+        funcao()
+    except Exception as e:
+        print(f"Erro: {str(e)}")
